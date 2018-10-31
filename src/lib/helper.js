@@ -6,8 +6,8 @@
  */
 export const addTodo = (list, item) => [item, ...list]
 
-/** 
- * generateId 
- *  
+/**
+ * generateId
+ *
  */
 export const generateId = () => Math.floor(Math.random() * 100000)

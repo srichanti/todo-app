@@ -1,15 +1,29 @@
 import React from 'react'
-import Enzyme, { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { shallow, mount } from 'enzyme'
 import TodoList from './TodoList'
+import TodoItem from './TodoItem'
 
 describe('TodoList Component', () => {
-  beforeAll(() => {
-    Enzyme.configure({ adapter: new Adapter() })
-  })
+  let shallowComponent
+  let mountComponent
+  let mockdata
 
+  beforeEach(() => {
+    mockdata = [
+      { id: 1, name: 'jest', isComplete: false },
+      { id: 2, name: 'mocha', isComplete: false },
+      { id: 3, name: 'enzyme', isComplete: false }
+    ]
+    shallowComponent = shallow(<TodoList todos={mockdata} />)
+    mountComponent = mount(<TodoList todos={mockdata} />)
+  })
   it('renders correctly', () => {
-    const component = shallow(<TodoList />)
-    expect(component).toMatchSnapshot()
+    expect(shallowComponent).toMatchSnapshot()
+  })
+  it('should render list with the given strings', () => {
+    expect(shallowComponent).toMatchSnapshot()
+  })
+  it('child components length should be equal to the length of the str', () => {
+    expect(mountComponent.find(TodoItem).length).toEqual(mockdata.length)
   })
 })

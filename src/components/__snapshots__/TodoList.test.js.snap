@@ -4,7 +4,25 @@ exports[`TodoList Component renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TodoList
-    todos={Array []}
+    todos={
+      Array [
+        Object {
+          "id": 1,
+          "isComplete": false,
+          "name": "jest",
+        },
+        Object {
+          "id": 2,
+          "isComplete": false,
+          "name": "mocha",
+        },
+        Object {
+          "id": 3,
+          "isComplete": false,
+          "name": "enzyme",
+        },
+      ]
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -19,10 +37,60 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": Array [],
+      "children": Array [
+        <TodoItem
+          id={1}
+          title="jest"
+        />,
+        <TodoItem
+          id={2}
+          title="mocha"
+        />,
+        <TodoItem
+          id={3}
+          title="enzyme"
+        />,
+      ],
     },
     "ref": null,
-    "rendered": Array [],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "id": 1,
+          "title": "jest",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "id": 2,
+          "title": "mocha",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "function",
+        "props": Object {
+          "id": 3,
+          "title": "enzyme",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -31,10 +99,236 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": Array [],
+        "children": Array [
+          <TodoItem
+            id={1}
+            title="jest"
+          />,
+          <TodoItem
+            id={2}
+            title="mocha"
+          />,
+          <TodoItem
+            id={3}
+            title="enzyme"
+          />,
+        ],
       },
       "ref": null,
-      "rendered": Array [],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "id": 1,
+            "title": "jest",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "id": 2,
+            "title": "mocha",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "function",
+          "props": Object {
+            "id": 3,
+            "title": "enzyme",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`TodoList Component should render list with the given strings 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TodoList
+    todos={
+      Array [
+        Object {
+          "id": 1,
+          "isComplete": false,
+          "name": "jest",
+        },
+        Object {
+          "id": 2,
+          "isComplete": false,
+          "name": "mocha",
+        },
+        Object {
+          "id": 3,
+          "isComplete": false,
+          "name": "enzyme",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <TodoItem
+          id={1}
+          title="jest"
+        />,
+        <TodoItem
+          id={2}
+          title="mocha"
+        />,
+        <TodoItem
+          id={3}
+          title="enzyme"
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "id": 1,
+          "title": "jest",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "id": 2,
+          "title": "mocha",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "function",
+        "props": Object {
+          "id": 3,
+          "title": "enzyme",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <TodoItem
+            id={1}
+            title="jest"
+          />,
+          <TodoItem
+            id={2}
+            title="mocha"
+          />,
+          <TodoItem
+            id={3}
+            title="enzyme"
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "id": 1,
+            "title": "jest",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "id": 2,
+            "title": "mocha",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "function",
+          "props": Object {
+            "id": 3,
+            "title": "enzyme",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": [Function],
     },
   ],
